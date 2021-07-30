@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'sudokudigits';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'), url(https://fonts.gstatic.com/s/titilliumweb/v9/NaPecZTIAOhVxoMyOr9n_E7fdMPmDQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+	background-color: #212121;
+	background-image: url('bg-wood2.jpg');
+	background-size: cover;
+	color: #352c21;
+}
+
+.btn {
+	background-color: #ecb788;
+	background-image: url('bg-wood3.jpg');
+	background-size: cover;
+	border: 2px solid #352c21;
+	color: #352c21;
+}
+
+.container {
+	background-color: #dbc19c;
+	background-image: url('bg-wood.jpg');
+	background-size: cover;
+}
+
+#area {
+	padding: 3px;
+	background-color: #1a1b20;
+}
+
+.squarepre {
+	padding: 2px;
+}
+.square {
+}
+
+.precell {
+	padding: 2px;
+	background-color: #dbc19c;
+	background-image: url('bg-wood.jpg');
+	background-size: cover;
+}
+.cell {
+	border-radius: 10%;
+	font-family: sudokudigits, sans-serif;
+}
+.cell.filled {
+	background-color: #ecb788;
+	background-image: url('bg-wood4.jpg');
+	background-size: cover;
+	color: #1a1b20;
+	box-shadow: inset 0 0 0 2px rgba(53,44,33,0.3);
+}
+.cell.active {
+	box-shadow: inset 0 0 0 2px #1976D2, 0 0 2px 2px #09f;
+}
+.cell.empty {
+	/* box-shadow: inset -3px 3px 10px 5px rgba(53,44,33,0.2), 0 0 1px 1px rgba(53,44,33,0.4); */
+	box-shadow: inset -2px 2px 1px 2px rgba(53,44,33,0.2), 0 0 1px 1px rgba(53,44,33,0.4);
+}
+.cell.empty:hover {
+	color: #999;
+}
+
+.cellcheckpre {
+	padding: 2px;
+}
+.cellcheck {
+	border-radius: 10%;
+	font-family: sudokudigits, sans-serif;
+	color: rgba(0,0,0,0.3);
+}
+.cellcheck.filled {
+	background-color: #ecb788;
+	background-image: url('bg-wood4.jpg');
+	background-size: cover;
+	color: #1a1b20;
+	box-shadow: inset 0 0  0 2px rgba(53,44,33,0.3);
+}
+.cellcheck.filled:hover {
+	background: rgba(0,0,0,0.1);
+}
+.cellcheck.active {
+	box-shadow: inset 0 0 0 2px #388E3C, 0 0 2px 2px #689F38 !important;
+}
+.cellcheck span {
+	color: rgba(0,0,0,0.5);
+}

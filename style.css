@@ -1,0 +1,289 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	font-size: 1.5em;
+	-moz-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	line-height: 1.42857143;
+	-webkit-touch-callout: none;
+	color: #37474f;
+}
+
+p {
+	margin: 0;
+}
+
+.h1 {
+	font-size: 38px;
+}
+
+input, button {
+	font-size: 1em;
+}
+
+.btn {
+	display: inline-block;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.btn:link, .btn:active, .btn:visited {
+	cursor: pointer;
+	text-decoration: none;
+}
+.btn:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.levelButton {
+	display: block;
+	width: 100%;
+	margin: 15px auto;
+	padding: 10px 20px;
+}
+
+.toright {
+	float: right;
+}
+
+.toleft {
+	float: left;
+}
+
+.container {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+	margin: 20px auto;
+	padding: 0px;
+}
+
+.window {
+	display: none;
+}
+
+.alertwin {
+	padding: 30px;
+	text-align: center;
+}
+
+#status {
+	padding: 20px;
+	background-color: #37474f;
+	color: white;
+}
+#status a {
+	color: silver;
+	text-decoration: none;
+}
+#status a:hover {
+	color: silver;
+	text-decoration: underline;
+}
+
+.themes {
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+.settheme {
+	display: inline-block;
+	width: 112px;
+	margin-right: 15px;
+	cursor: pointer;
+	line-height: 120%;
+	background-color: #37474f;
+	color: white;
+	text-align: center;
+}
+.settheme img {
+	width: 100%;
+}
+.settheme div {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.settheme:hover {
+	box-shadow: 0 0 15px black;
+}
+.settheme.active {
+	box-shadow: 0 0 15px black;
+}
+
+#gamestart {
+}
+#gamestart .pad {
+	padding: 30px;
+}
+
+#gamewin {
+	background-color: #51b315;
+	color: white;
+}
+
+#gamefail {
+	background-color: #b31515;
+	color: white;
+}
+
+#gamepad {
+}
+
+#scorepad {
+	width: 100%;
+	padding: 20px 10px;
+	overflow: hidden;
+}
+
+#mistakes, #emptycells, #time, #level {
+	display: inline-block;
+	margin: 10px 15px 0 0;
+
+}
+
+#area {
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+#gamearea {
+}
+
+#helper {
+	overflow: hidden;
+	text-align: center;
+	padding: 20px 5px;
+}
+
+.squarepre {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	height: 200px;
+}
+.square {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.precell {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	vertical-align: middle;
+}
+.cell {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	word-wrap: break-word;
+	font-size: 1em;
+	line-height: 100%;
+}
+.cell.active {
+}
+.cell.filled {
+	cursor: default;
+}
+.cell.empty {
+	cursor: pointer;
+}
+.cell.empty:hover {
+}
+.cell.wrong {
+	animation: circle 1s linear forwards;
+	-webkit-animation: circle 1s linear forwards;
+}
+
+
+@-webkit-keyframes circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+.cellcheckpre {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+}
+.cellcheck {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+	text-align: center;
+	word-wrap: break-word;
+	font-size: 1em;
+	cursor: default;
+}
+.cellcheck.filled {
+	cursor: pointer;
+}
+.cellcheck.filled:hover {
+}
+.cellcheck.active {
+}
+.cellcheck span {
+	position: absolute;
+	right: 3px;
+	bottom: 2px;
+	font-size: 0.4em;
+	line-height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		margin: 0 auto;
+		min-height: 100%;
+	}
+	#scorepad {
+		padding: 10px 10px;
+		font-size: .8em;
+	}
+}
+
+.fbbutton {
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 13px;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMVEVOaaJDYJxCX5xBXptIZJ9MZ6E/XJpFYZ1KZqA9W5lGYp5HY55MaKFJZZ9LZqBEYZ1NaaJNaKJNaKFAXZtAXZpLZ6E+XJo+W5lJZaA9Wpk8Wpk8Wpg8WZg7WZj2xcGWAAAANElEQVR42lWGSQoAIBDDHCjo0f8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==") repeat scroll 0 0 #46629e;
+	border-radius: 2px;
+	color: white;
+	text-decoration: none;
+}
+.fbbutton:hover {
+	background: #46629e;
+	color: white;
+	text-decoration: none;
+}
+.fbbutton span {
+    border-right: 1px solid rgba(255,255,255,0.5);
+    margin-right: 9px;
+    padding-right: 9px;
+    font-size: 24px;
+}

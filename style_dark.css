@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'sudokudigits';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'), url(https://fonts.gstatic.com/s/titilliumweb/v9/NaPecZTIAOhVxoMyOr9n_E7fdMPmDQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+	background-color: #282c34;
+	color: #abb2bf;
+}
+
+.btn {
+	background-color: #282c34;
+	color: #abb2bf;
+	border-radius: 2px;
+	border: 0;
+}
+.btn:hover {
+	color: white;
+}
+
+.container {
+	box-shadow: 1px 1px 17px rgba(0,0,0,0.2);
+	background-color: #21252b;
+}
+
+#mistakes, #emptycells, #time {
+	color: #b19a5e;
+}
+#mistakes span, #emptycells span, #time span {
+	color: #d64f43;
+}
+
+#area {
+	padding: 1px;
+}
+
+.squarepre {
+	padding: 1px;
+}
+.square {
+	background-color: #21252b;
+}
+
+.precell {
+	padding: 1px;
+}
+.cell {
+	font-family: sudokudigits, sans-serif;
+	color: #abb2bf;
+	background-color: #282c34;
+}
+.cell.active {
+	background-color: #484d57 !important;
+	color: #8ac363;
+}
+.cell.filled {
+}
+.cell.empty {
+}
+.cell.empty:hover {
+	color: rgba(255,255,255,0.5);
+}
+
+.cellcheckpre {
+	padding: 1px;
+}
+.cellcheck {
+	color: #3aa9c2;
+	font-family: sudokudigits, sans-serif;
+}
+.cellcheck.filled {
+	background-color: #282c34;
+}
+.cellcheck.filled:hover {
+	background: #363b45;
+}
+.cellcheck.active {
+	background-color: #484d57;
+}
+.cellcheck span {
+	color: rgba(255,255,255,0.5);
+}
